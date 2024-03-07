@@ -11,7 +11,7 @@ class UserController {
     }
 
     async listAllUser(req, res) {
-        const [rows] = await knex('users').select()
+        const rows = await knex('users').select()
         res.status(200).json(rows)
     }
     async deleteUser(req, res) {
