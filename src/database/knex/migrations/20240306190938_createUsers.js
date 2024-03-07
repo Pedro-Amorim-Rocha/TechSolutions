@@ -6,8 +6,8 @@ exports.up = (knex) => {
         table.string('password').notNullable();
         table.boolean("isAdmin").defaultTo("false");
 
-        table.timestam('created_at').defaultTo(knex.fn.now());
-        table.timestam('updated_at').defaultTo(knex.fn.now());
+        table.timestamp('created_at').defaultTo(knex.fn.now());
+        table.timestamp('updated_at').defaultTo(knex.fn.now());
 
     })
 }
